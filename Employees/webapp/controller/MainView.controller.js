@@ -15,12 +15,12 @@ sap.ui.define([
 
             if (valueEmployee.length === 6) {
                 //inputEmployee.setDescription("OK");
-                this.byId("labelCountry").setVisible(true);
-                this.byId("slCountry").setVisible(true);
+                this.getView().byId("labelCountry").setVisible(true);
+                this.getView().byId("slCountry").setVisible(true);
             } else {
                 //inputEmployee.setDescription("Not OK");
-                this.byId("labelCountry").setVisible(false);
-                this.byId("slCountry").setVisible(false);
+                this.getView().byId("labelCountry").setVisible(false);
+                this.getView().byId("slCountry").setVisible(false);
             }
         };
 
