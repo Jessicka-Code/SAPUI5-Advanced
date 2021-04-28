@@ -2,7 +2,7 @@ sap.ui.define([
     'sap/ui/core/mvc/Controller',
     "sap/ui/core/routing/History"
 ], function (Controller, History) {
-    
+
     function _onObjectMatched(oEvent) {
         this.getView().bindElement({
             path: "/Orders(" + oEvent.getParameter("arguments").OrderID + ")",
@@ -26,6 +26,10 @@ sap.ui.define([
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
                 oRouter.navTo("RouteMain", true);
             }
+        },
+        onClearSignature: function (oEvent) {
+            var signature = this.byId("signature");
+            signature.clear();
         }
     });
 });
