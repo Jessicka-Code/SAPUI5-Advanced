@@ -57,5 +57,8 @@
                 </l:Grid>
             </Panel>
         </content>
+        <Panel headerText="{i18n>orderProducts}">
+            <List items="{path:'odataNorthwind>Order_Details', parameters:{expand : 'Product'}, factory: '.factoryOrderDetails'}"/>
+        </Panel>
     </Page>
 </mvc:View>
