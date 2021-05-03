@@ -1,3 +1,4 @@
+// @ts-nocheck
 sap.ui.define([
     'sap/ui/core/mvc/Controller',
     "sap/m/MessageBox"
@@ -14,17 +15,17 @@ sap.ui.define([
 
             var oJSONModelEmpl = new sap.ui.model.json.JSONModel();
             // @ts-ignore
-            oJSONModelEmpl.loadData("./localService/mockdata/Employees.json", false);
+            oJSONModelEmpl.loadData("./model/json/Employees.json", false);
             oView.setModel(oJSONModelEmpl, "jsonEmployees");
 
             var oJSONModelCountries = new sap.ui.model.json.JSONModel();
             // @ts-ignore
-            oJSONModelCountries.loadData("./localService/mockdata/Countries.json", false);
+            oJSONModelCountries.loadData("./model/json/Countries.json", false);
             oView.setModel(oJSONModelCountries, "jsonCountries");
 
             var oJSONModelLayout = new sap.ui.model.json.JSONModel();
             // @ts-ignore
-            oJSONModelLayout.loadData("./localService/mockdata/Layout.json", false);
+            oJSONModelLayout.loadData("./model/json/Layout.json", false);
             oView.setModel(oJSONModelLayout, "jsonLayout");
 
             var oJSONModelConfig = new sap.ui.model.json.JSONModel({
